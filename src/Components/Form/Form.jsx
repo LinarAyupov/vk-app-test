@@ -1,5 +1,6 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
+
 const Form = (props) => {
     const newInputText = (e) => {
         let text = e.target.value
