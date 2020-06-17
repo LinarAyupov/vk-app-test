@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom";
 const Profile = (props) => {
 
     return (
-        <div className= "profile">
+        <div className="profile">
             <div className="profile__avatar">
                 <img src={props.profile.photo_100} alt="" className="profile__avatar-img"/>
             </div>
