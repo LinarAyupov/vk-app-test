@@ -15,7 +15,7 @@ class FormContainer extends React.Component {
                     if (response.response.length === 0) {
                         alert("Invalid id")
                     } else if (response === undefined){
-                        alert("Unknown error")
+                        alert("Срок действия токена истек!")
                     } else {
                         this.props.setProfileToState(response.response[0])
                     }
