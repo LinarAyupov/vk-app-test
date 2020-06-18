@@ -9,11 +9,13 @@ class FormContainer extends React.Component {
 
 
     showProfile = () => {
-        return axios.jsonp(`https://api.vk.com/method/users.get?user_ids=${this.props.profileId}&fields=photo_100&access_token=c3ca8feff78ceaa45229162f42ecaa30f951a3e0b56c99f7102f2e0287ed8ec93c5a9419872cd997c8432&v=5.52`)
+        return axios.jsonp(`https://api.vk.com/method/users.get?user_ids=${this.props.profileId}&fields=photo_100&access_token=ced3d1c5e063948f859fdc9d6613a2f4dcfcd07b91bfc1327fc7640b864363f99f9a3645a2c6a0f35ab46&v=5.52`)
             .then(
                 response => {
-                    if (response.response.length===0) {
+                    if (response.response.length === 0) {
                         alert("Invalid id")
+                    } else if (response === undefined){
+                        alert("Unknown error")
                     } else {
                         this.props.setProfileToState(response.response[0])
                     }

@@ -9,10 +9,11 @@ import FriendsListContainer from "../Friends/FriendsListContainer";
 class ProfileContainer extends React.Component {
 
     showFriends = () => {
-        return axios.jsonp(`https://api.vk.com/method/friends.search?user_id=${this.props.profile.id}&fields=photo_50&count=1000&access_token=c3ca8feff78ceaa45229162f42ecaa30f951a3e0b56c99f7102f2e0287ed8ec93c5a9419872cd997c8432&v=5.52`)
+        return axios.jsonp(`https://api.vk.com/method/friends.search?user_id=${this.props.profile.id}&fields=photo_50&count=1000&access_token=ced3d1c5e063948f859fdc9d6613a2f4dcfcd07b91bfc1327fc7640b864363f99f9a3645a2c6a0f35ab46&v=5.52`)
             .then(
                 response => {
-                    if (response.error.error_code === 15) {
+                    if (response.response === undefined) {
+                        debugger
                         alert('Access denied: this profile is privateAccess denied: this profile is private')
                     } else {
                         this.props.setFriendsToState(response.response.items)
