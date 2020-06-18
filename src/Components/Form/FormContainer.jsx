@@ -13,7 +13,7 @@ class FormContainer extends React.Component {
             .then(
                 response => {
                     if (response.response === undefined) {
-                        console.log(response)
+                        alert("Invalid id")
                     } else if (response.response.length === 0){
                         alert("Invalid id")
                     } else {
