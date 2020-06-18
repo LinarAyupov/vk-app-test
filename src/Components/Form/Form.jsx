@@ -8,7 +8,7 @@ const Form = (props) => {
     }
     return (
         <div className="search-form">
-            <div className="search-form__title">Enter id profile page</div>
+            <div className="search-form__title">Введите ID пользователя Вконтакте</div>
             <input type="text"
                    className="search-form__input"
                    onChange={newInputText}
