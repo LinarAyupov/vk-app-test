@@ -13,7 +13,6 @@ class ProfileContainer extends React.Component {
             .then(
                 response => {
                     if (response.response === undefined) {
-                        debugger
                         alert('Access denied: this profile is privateAccess denied: this profile is private')
                     } else {
                         this.props.setFriendsToState(response.response.items)
