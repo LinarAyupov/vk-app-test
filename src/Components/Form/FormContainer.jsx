@@ -13,9 +13,9 @@ class FormContainer extends React.Component {
             .then(
                 response => {
                     if (response.response === undefined) {
-                        alert("Invalid id")
+                        alert("Введен не верный ID пользователя")
                     } else if (response.response.length === 0){
-                        alert("Invalid id")
+                        alert("Введен не верный ID пользователя")
                     } else {
                         this.props.setProfileToState(response.response[0])
                     }
