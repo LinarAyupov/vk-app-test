@@ -9,7 +9,7 @@ import FriendsListContainer from "../Friends/FriendsListContainer";
 class ProfileContainer extends React.Component {
 
     showFriends = () => {
-        return axios.jsonp(`https://api.vk.com/method/friends.search?user_id=${this.props.profile.id}&fields=photo_50&count=1000&access_token=ced3d1c5e063948f859fdc9d6613a2f4dcfcd07b91bfc1327fc7640b864363f99f9a3645a2c6a0f35ab46&v=5.52`)
+        return axios.jsonp(`https://api.vk.com/method/friends.search?user_id=${this.props.profile.id}&fields=photo_50&count=1000&access_token=3667a9113667a9113667a911b836150a1a336673667a911688f6547e73321d48e3f1db1&v=5.52`)
             .then(
                 response => {
                     if (response.response === undefined) {
